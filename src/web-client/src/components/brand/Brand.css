@@ -1,0 +1,30 @@
+.brand-container {
+    display: flex;
+    align-items: center;
+}
+
+.title-brand {
+    margin-left: 10px;
+    font-size: 17px;
+    color: #006de3;
+}
+
+.bold {
+    font-family: "SFProText-Semibold";
+    font-weight: bolder;
+}
+
+.normal {
+    font-family: "SFProText-Regular";
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SFProText-Semibold";
+    src: local("SFProText-Semibold"), url(../../assets/fonts/SFProText-Semibold-1.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "SFProText-Regular";
+    src: local("SFProText-Regular"), url(../../assets/fonts/SFProText-Regular.ttf) format("truetype");
+}
