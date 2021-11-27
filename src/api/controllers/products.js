@@ -7,7 +7,9 @@ const { filterByDates } = require('../helpers/filterByDates')
 const getProducts = async (req, res = response, next) => {
     try {
         // handle pagination
-        const page = req.query.page;
+        let page = 1;
+        if(req.query.page)
+            page = req.query.page
 
         // get rate of dollar in pesos
         const dollar = await axios.get(process.env.API_DOLLAR);
