@@ -7,6 +7,7 @@ app.use(cors())
 app.use(express.static('public'));
 app.use(express.json());
 app.use('/api/products', require('./routes/products'));
+app.use('/api/categories', require('./routes/categories'));
 app.listen(process.env.PORT, () => {
   console.log(`Server running in port: ${process.env.PORT}`);
 });
