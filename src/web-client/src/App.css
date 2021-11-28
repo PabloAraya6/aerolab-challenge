@@ -1,5 +1,42 @@
-.App {
-  text-align: center;
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.title-header {
+  padding-left: 25px;
+  float: left;
+  font-size: 24px;
+  font-weight: normal;
+  color: #000000;
+  letter-spacing: 0;
+  font-family: HelveticaNeue-Medium;
+  margin: 0;
+  padding: 20px 0 0 5%;
+  letter-spacing: 0;
+}
+
+.listing-container {
+  list-style: none;
+  margin: 1em;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.buttom-load {
+  width: 176px;
+  border: 1px solid #0070e0;
+  height: 40px;
+  display: flex;
+  align-self: center;
+  margin-top: 16px;
+  align-items: center;
+  border-radius: 3px;
+  justify-content: center;
+  background-color: #0070e0;
 }
 
 .App-logo {
