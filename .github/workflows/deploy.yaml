@@ -23,4 +23,4 @@ jobs:
         heroku_email: ${{secrets.HEROKU_API_KEY}}
       env:
         HD_APP_BASE: "src/web-client"
-        HD_REACT_APP_API_URL: "https://api-aerolab.herokuapp.com"
+        HD_REACT_APP_API_URL: "https://api-aerolab-899.herokuapp.com"
