@@ -5,13 +5,12 @@ import Loading from "../loading";
 import axios from "axios";
 import Title from '../title/Title';
 
-const TOTAL_PAGES = 10;
-
 const Products = () => {
     const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [hasMore, setHasMore] = useState(true);
     const [pages, setPages] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
     const observer = useRef();
 
     useEffect(() => {
@@ -26,7 +25,7 @@ const Products = () => {
 
             observer.current = new IntersectionObserver((entries) => {
                 if (entries[0].isIntersecting && hasMore) {
-                    if (pages < TOTAL_PAGES) {
+                    if (pages <= totalPages) {
                         getItems(pages);
                         setPages((pages) => pages + 1);
                     } else {
@@ -50,13 +49,17 @@ const Products = () => {
 
     const getItems = async (page) => {
         setIsLoading(true);
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-
-        await axios.get(`https://api-aerolab-899.herokuapp.com/api/products?page=${page}`)
-            .then(resp => {
-                setItems([...items, ...resp.data.products])
-                setIsLoading(false)
-            });
+        try {
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+            await axios.get(`https://api-aerolab-899.herokuapp.com/api/products?page=${page}`)
+                .then(resp => {
+                    setItems([...items, ...resp.data.products])
+                    setTotalPages(resp.data.page_count);
+                    setIsLoading(false)
+                });
+        } catch (error) {
+            setIsLoading(false)
+        }
     }
 
     return (
