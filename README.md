@@ -1,1 +1,35 @@
-# aerolab-challenge
+# Full Stack Challenge 🚀
+_Small web application with api and web-client components for Aerolab_
+## [DEMO](https://web-client-899.herokuapp.com/) 💣
+
+## Introduction 💥
+
+
+![Mobile version](https://github.com/PabloAraya6/aerolab-challenge/blob/main/mobile-capture.png?raw=true)
+
+
+![Desktop version](https://github.com/PabloAraya6/aerolab-challenge/blob/main/desktop-capture.png?raw=true)
+
+---
+##  Built with 🔧 ​
+
+* API in [Node](https://nodejs.org/).
+* Client in [React](https://reactjs.org/).
+* Deployed in [Heroku](https://www.heroku.com).
+* CI/CD with [Github Actions](https://github.com/features/actions).
+
+---
+
+##  Author ✒️ 
+
+
+**Pablo Araya** - *Full Stack developer*
+
+* Github: [PabloAraya6](https://github.com/PabloAraya6)
+* Linkedin: [PabloAraya6](https://www.linkedin.com/in/pabloaraya6/)
+* Email: [arayap812@gmail.com](mailto:arayap812@gmail.com)
+
+
+###  Thanks 🎁
+---
+⌨️ with ❤️ by [Pablo Araya](https://github.com/PabloAraya6) �
