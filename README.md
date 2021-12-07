@@ -1,8 +1,15 @@
 # Full Stack Challenge 🚀
-_Small web application with api and web-client components for Aerolab_
+_Small web application with api and web-client components in a monorepo for Aerolab_
 ## [DEMO](https://web-client-899.herokuapp.com/) 💣
 
 ## Introduction 💥
+
+API: https://api-aerolab-899.herokuapp.com/
+WEB-CLIENT: https://web-client-899.herokuapp.com/
+---
+API Endpoints (examples)
+* https://api-aerolab-899.herokuapp.com/api/products?page=1
+* https://api-aerolab-899.herokuapp.com//api/category_tree
 
 
 ![Mobile version](https://github.com/PabloAraya6/aerolab-challenge/blob/main/mobile-capture.png?raw=true)
