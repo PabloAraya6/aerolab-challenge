@@ -4,12 +4,12 @@ _Small web application with api and web-client components in a monorepo for Aero
 
 ## Introduction 💥
 
-API: https://api-aerolab-899.herokuapp.com
+### API: https://api-aerolab-899.herokuapp.com
 
-WEB-CLIENT: https://web-client-899.herokuapp.com
+### WEB-CLIENT: https://web-client-899.herokuapp.com
 
 ---
-API Endpoints (examples)
+### API Endpoints (examples)
 * https://api-aerolab-899.herokuapp.com/api/products?page=1
 * https://api-aerolab-899.herokuapp.com/api/category_tree
 
