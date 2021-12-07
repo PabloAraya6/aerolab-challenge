@@ -11,7 +11,7 @@ WEB-CLIENT: https://web-client-899.herokuapp.com
 ---
 API Endpoints (examples)
 * https://api-aerolab-899.herokuapp.com/api/products?page=1
-* https://api-aerolab-899.herokuapp.com//api/category_tree
+* https://api-aerolab-899.herokuapp.com/api/category_tree
 
 
 ![Mobile version](https://github.com/PabloAraya6/aerolab-challenge/blob/main/mobile-capture.png?raw=true)
