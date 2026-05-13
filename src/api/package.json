@@ -5,18 +5,20 @@
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check": "node --check main.js && node --check config.js && node --check controllers/products.js && node --check controllers/categories.js",
+    "test": "npm run check"
   },
   "author": "Pablo Araya",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.24.0",
+    "axios": "^1.16.1",
     "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "moment": "^2.29.1"
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2",
+    "helmet": "^8.1.0",
+    "moment": "^2.30.1"
   },
   "engines": {
-    "node": "15.x"
+    "node": ">=20 <23"
   }
 }
