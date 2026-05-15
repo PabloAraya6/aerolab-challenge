@@ -35,5 +35,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "resolutions": {
+    "@babel/helpers": "7.29.2",
+    "@babel/plugin-transform-modules-systemjs": "7.29.4",
+    "@babel/runtime": "7.29.2",
+    "@babel/runtime-corejs3": "7.29.2",
+    "@tootallnate/once": "3.0.1",
+    "react-scripts/**/fork-ts-checker-webpack-plugin/minimatch/brace-expansion": "1.1.13",
+    "react-scripts/**/rimraf/glob/minimatch/brace-expansion": "1.1.13",
+    "react-scripts/**/test-exclude/minimatch/brace-expansion": "1.1.13",
+    "react-scripts/**/resolve-url-loader/postcss": "8.5.14",
+    "react-scripts/**/make-dir/semver": "6.3.1",
+    "react-scripts/**/istanbul-lib-instrument/semver": "6.3.1"
   }
 }
