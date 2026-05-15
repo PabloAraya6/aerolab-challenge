@@ -7,7 +7,7 @@ const Cart = () => {
 
     useEffect(() => {
         sumItems();
-    }, [addItemsToCart])
+    }, [addItemsToCart, sumItems])
 
     return (
         <div className='card-container'>

@@ -13,10 +13,24 @@ const Products = () => {
     const [totalPages, setTotalPages] = useState(1);
     const observer = useRef();
 
-    useEffect(() => {
-        getItems(pages);
-        setPages((pages) => pages + 1);
+    const getItems = useCallback(async (page) => {
+        setIsLoading(true);
+        try {
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+            const resp = await axios.get(`https://api-aerolab-899.herokuapp.com/api/products?page=${page}`);
+            setItems((previousItems) => [...previousItems, ...resp.data.products]);
+            setTotalPages(resp.data.page_count);
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setIsLoading(false);
+        }
     }, []);
+
+    useEffect(() => {
+        getItems(1);
+        setPages(2);
+    }, [getItems]);
 
     const lastItemRef = useCallback(
         (node) => {
@@ -27,7 +41,7 @@ const Products = () => {
                 if (entries[0].isIntersecting && hasMore) {
                     if (pages <= totalPages) {
                         getItems(pages);
-                        setPages((pages) => pages + 1);
+                        setPages((currentPage) => currentPage + 1);
                     } else {
                         setHasMore(false);
                     }
@@ -36,7 +50,7 @@ const Products = () => {
 
             if (node) observer.current.observe(node);
         },
-        [isLoading, hasMore]
+        [getItems, hasMore, isLoading, pages, totalPages]
     );
 
     const Infinite = ({ children, reference }) => {
@@ -46,21 +60,6 @@ const Products = () => {
             </div>
         );
     };
-
-    const getItems = async (page) => {
-        setIsLoading(true);
-        try {
-            await new Promise((resolve) => setTimeout(resolve, 1000));
-            await axios.get(`https://api-aerolab-899.herokuapp.com/api/products?page=${page}`)
-                .then(resp => {
-                    setItems([...items, ...resp.data.products])
-                    setTotalPages(resp.data.page_count);
-                    setIsLoading(false)
-                });
-        } catch (error) {
-            setIsLoading(false)
-        }
-    }
 
     return (
         <>

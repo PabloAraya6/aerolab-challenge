@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useCallback } from "react";
 export const ProductsContext = createContext();
 
 const ProductsContextProvider = (props) => {
@@ -6,8 +6,8 @@ const ProductsContextProvider = (props) => {
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalItems, setTotalItems] = useState(0);
 
-    const setStorage = () => localStorage.setItem('cart', JSON.stringify(addItemsToCart));
-    const getStorage = () => localStorage.getItem('cart') ? setAddItemsToCart(JSON.parse(localStorage.getItem('cart'))) : [];
+    const setStorage = useCallback(() => localStorage.setItem('cart', JSON.stringify(addItemsToCart)), [addItemsToCart]);
+    const getStorage = useCallback(() => localStorage.getItem('cart') ? setAddItemsToCart(JSON.parse(localStorage.getItem('cart'))) : [], []);
 
     const resetCartItems = () => {
         setAddItemsToCart([]);
@@ -19,14 +19,14 @@ const ProductsContextProvider = (props) => {
 
     useEffect(() => {
         getStorage();
-    }, []);
+    }, [getStorage]);
 
-    const sumItems = () => {
+    const sumItems = useCallback(() => {
         let acc = addItemsToCart.reduce((total, item) => total + item.count, 0);
         let total = addItemsToCart.reduce((total, item) => (total + (item.product.price * item.count)), 0).toFixed(2);
         setTotalItems(acc);
         setTotalPrice(total);
-    };
+    }, [addItemsToCart]);
 
 
     const handleCartItems = (product, count) => {

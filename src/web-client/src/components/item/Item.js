@@ -18,11 +18,11 @@ const Item = ({ item }) => {
         const flag = addItemsToCart.find((element) => element.product.id === item.id);
         if (flag)
             setCountItem(flag.count)
-    }, []);
+    }, [addItemsToCart, getStorage, item.id]);
 
     useEffect(() => {
         setStorage();
-    }, [countItem]);
+    }, [countItem, setStorage]);
 
 
     return (
