@@ -47,6 +47,20 @@
     "react-scripts/**/test-exclude/minimatch/brace-expansion": "1.1.13",
     "react-scripts/**/resolve-url-loader/postcss": "8.5.14",
     "react-scripts/**/make-dir/semver": "6.3.1",
-    "react-scripts/**/istanbul-lib-instrument/semver": "6.3.1"
+    "react-scripts/**/istanbul-lib-instrument/semver": "6.3.1",
+    "flatted": "3.4.2",
+    "**/flatted": "3.4.2",
+    "js-yaml": "4.1.1",
+    "**/js-yaml": "4.1.1",
+    "nth-check": "3.0.1",
+    "**/nth-check": "3.0.1",
+    "on-headers": "1.1.0",
+    "**/on-headers": "1.1.0",
+    "serialize-javascript": "7.0.5",
+    "**/serialize-javascript": "7.0.5",
+    "tmpl": "1.0.5",
+    "**/tmpl": "1.0.5",
+    "webpack-dev-server": "5.2.4",
+    "**/webpack-dev-server": "5.2.4"
   }
 }
